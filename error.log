@@ -1,0 +1,6 @@
+{"level":"error","message":"n2 is incorrectly defined","service":"calculate-service"}
+{"level":"error","message":"n2 is incorrectly defined","service":"calculate-service"}
+{"level":"error","message":"Error performing operation: multiply. Error: Please provide valid numbers for n1 and n2.","service":"arithmetic-service"}
+{"level":"error","message":"Error performing operation: devide. Error: Invalid operation","service":"arithmetic-service"}
+{"level":"error","message":"Error performing operation: divide. Error: Division by zero is not allowed.","service":"arithmetic-service"}
+{"level":"error","message":"Error performing operation: divide. Error: Please provide valid numbers for n1 and n2.","service":"arithmetic-service"}

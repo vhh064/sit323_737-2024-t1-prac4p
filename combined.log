@@ -1,0 +1,20 @@
+{"level":"error","message":"n2 is incorrectly defined","service":"calculate-service"}
+{"level":"error","message":"n2 is incorrectly defined","service":"calculate-service"}
+{"level":"info","message":"Parameters 10 and 5 received for addition","service":"calculate-service"}
+{"level":"info","message":"Parameters 10 and 5 received for addition","service":"calculate-service"}
+{"level":"info","message":"Arithmetic service listening at http://localhost:3040","service":"arithmetic-service"}
+{"level":"info","message":"Arithmetic service listening at http://localhost:3040","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: add with n1: 5, n2: 3, result: 8","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: subtract with n1: 5, n2: 3, result: 2","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: multiply with n1: 5, n2: 3, result: 15","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: divide with n1: 5, n2: 3, result: 1.6666666666666667","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: divide with n1: 6, n2: 2, result: 3","service":"arithmetic-service"}
+{"level":"info","message":"Arithmetic service listening at http://localhost:3040","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: subtract with n1: 10, n2: 2, result: 8","service":"arithmetic-service"}
+{"level":"error","message":"Error performing operation: multiply. Error: Please provide valid numbers for n1 and n2.","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: multiply with n1: 5, n2: 100, result: 500","service":"arithmetic-service"}
+{"level":"error","message":"Error performing operation: devide. Error: Invalid operation","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: divide with n1: 4, n2: 4, result: 1","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: divide with n1: 0, n2: 4, result: 0","service":"arithmetic-service"}
+{"level":"error","message":"Error performing operation: divide. Error: Division by zero is not allowed.","service":"arithmetic-service"}
+{"level":"error","message":"Error performing operation: divide. Error: Please provide valid numbers for n1 and n2.","service":"arithmetic-service"}
