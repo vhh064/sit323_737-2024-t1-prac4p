@@ -18,3 +18,8 @@
 {"level":"info","message":"Operation performed: divide with n1: 0, n2: 4, result: 0","service":"arithmetic-service"}
 {"level":"error","message":"Error performing operation: divide. Error: Division by zero is not allowed.","service":"arithmetic-service"}
 {"level":"error","message":"Error performing operation: divide. Error: Please provide valid numbers for n1 and n2.","service":"arithmetic-service"}
+{"level":"info","message":"Arithmetic service listening at http://localhost:3040","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: exponentiation with n1: 2, n2: 3, result: 8","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: sqrt with n1: 16, n2: NaN, result: 4","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: modulo with n1: 10, n2: 4, result: 2","service":"arithmetic-service"}
+{"level":"info","message":"Operation performed: sqrt with n1: 16, n2: NaN, result: 4","service":"arithmetic-service"}

@@ -31,6 +31,14 @@ const performOperation = (operation, num1, num2) => {
     case 'divide':
       if(num2 === 0) throw new Error('Division by zero is not allowed.');
       return num1 / num2;
+    case 'exponentiation':
+      return Math.pow(num1, num2);
+    case 'sqrt':
+      if (num1 < 0) throw new Error('Square root of negative number is not allowed.');
+      return Math.sqrt(num1);
+    case 'modulo':
+      if(num2 === 0) throw new Error('Modulo by zero is not allowed.');
+      return num1 % num2;
     default:
       throw new Error('Invalid operation');
   }
@@ -43,8 +51,11 @@ app.get('/:operation', (req, res) => {
     const num1 = parseFloat(req.query.n1);
     const num2 = parseFloat(req.query.n2);
 
-    if(isNaN(num1) || isNaN(num2)) {
+    // Adjusted validation for operations that require only one number
+    if(operation !== 'sqrt' && (isNaN(num1) || isNaN(num2))) {
       throw new Error('Please provide valid numbers for n1 and n2.');
+    } else if (operation === 'sqrt' && isNaN(num1)) {
+      throw new Error('Please provide a valid number for n1.');
     }
 
     const result = performOperation(operation, num1, num2);
@@ -52,10 +63,11 @@ app.get('/:operation', (req, res) => {
     logger.info(`Operation performed: ${operation} with n1: ${num1}, n2: ${num2}, result: ${result}`);
   } catch (error) {
     logger.error(`Error performing operation: ${req.params.operation}. Error: ${error.message}`);
-    const statusCode = error.message === 'Division by zero is not allowed.' || error.message === 'Please provide valid numbers for n1 and n2.' ? 400 : 500;
+    const statusCode = error.message === 'Division by zero is not allowed.' || error.message === 'Modulo by zero is not allowed.' || error.message === 'Square root of negative number is not allowed.' || error.message === 'Please provide valid numbers for n1 and n2.' || error.message === 'Please provide a valid number for n1.' ? 400 : 500;
     res.status(statusCode).json({ statusCode: statusCode, message: error.message });
   }
 });
+
 
 // Start the server
 app.listen(port, () => {
